@@ -1,0 +1,61 @@
+{
+    "tabbed_maps": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "content": {
+                    "type": "array",
+                    "orientation": "horizontal",
+                    "content": [
+                        {
+                            "type": "tabbed",
+                            "tabs": [
+                                {
+                                    "title": "Main Room",
+                                    "content": {
+                                        "type": "map",
+                                        "maps": [
+                                            "mainroom"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "title": "Other Submaps if I had them",
+                                    "content": {
+                                        "type": "map",
+                                        "maps": [
+                                            ""
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tabbed",
+                            "tabs": [
+                                {
+                                    "title": "Overworld",
+                                    "content": {
+                                        "type": "map",
+                                        "maps": [
+                                            "Overworld"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "title": "",
+                                    "content": {
+                                        "type": "map",
+                                        "maps": [
+                                            "Credits"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

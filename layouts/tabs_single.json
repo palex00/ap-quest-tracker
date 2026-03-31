@@ -1,0 +1,34 @@
+{
+    "tabbed_maps": {
+        "type": "tabbed",
+        "tabs": [
+            {
+                "title": "Overworld",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Overworld"
+                    ]
+                }
+            },
+            {
+                "title": "Actual Map",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "mainroom"
+                    ]
+                }
+            },
+            {
+                "title": "",
+                "content": {
+                    "type": "map",
+                    "maps": [
+                        "Credits"
+                    ]
+                }
+            }
+        ]
+    }
+}

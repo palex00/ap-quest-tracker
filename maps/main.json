@@ -1,0 +1,9 @@
+
+[
+    {
+        "name": "mainroom",
+        "location_size": 76,
+        "location_border_thickness": 2,
+        "img": "images/maps/map.png"
+    }
+]

@@ -1,0 +1,209 @@
+[
+// There are MANY ways on how to set up the structure of your locations + refs.
+// I prefer to work from an "overworld map"-perspective where the following is done:
+// - All region logic is processed in access.json
+// - The individual checks are laid out on the Overworld Map in grouped squares based on the perceived regions
+//   - Note that "logical regions" does not mean "perceived region". Your "House" can be a perceived region
+//     because it has many checks closeby and is thematically coherent, but inside each room can be a different
+//     logical region
+// - submaps.json or (submaps_single.json & submaps_groups.json) then hold very tightly formatted data that
+//   places all the single checks onto the granular "submaps" (e.g. a layout of the interior of your house)
+//   I usually use a Google Sheet with formulas to produce this. It's very convenient for community-sourced
+//   placement! Link: https://docs.google.com/spreadsheets/d/1a5HTm6NWfHJYH7Qlisf4gINLVu01Rwk5-GHFoIAStpg/edit?usp=sharing
+    {
+        "name": "Starting Area",
+        "chest_unopened_img": "/images/items/close.png",
+        "chest_opened_img": "/images/items/open.png",
+        "overlay_background": "#000000",
+        "access_rules": [
+            " " // Why do I not put the access rule in here? Because sometimes perceived regions can be split into
+                // two very different logical regions which do not share the same pre-requisites.
+                // Imagine a town is split in two by a giant chasm. You still wanna call the group "Town X" but
+                // left & right side have two totally different ways to access them.
+                // I made this mistake in my Crystal pack, to tie logic to the perceived regions and with time,
+                // I regretted it so much: https://github.com/palex00/crystal-ap-tracker/blob/7a927a3c96238abfc4df7c8b4da73d052cd28a27/locations/locations.json#L465
+        ],
+        "sections": [
+            {
+                "name": "Bottom Left Chest",
+                "access_rules": [
+                    "@overworld" // this refers to the region in access.json
+                ],
+                "visibility_rules": [
+                    "" // always visible. Usually it's good to just leave this here in case something ever changes, like a rando setting to hide all "chest based checks" or something like that
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Bottom Left Extra Chest",
+                "access_rules": [
+                    "@overworld"
+                ],
+                "visibility_rules": [
+                    "extrastartingchest_on" // this means this will only be visible (including refs) if the setting is on, see settings.json
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "Overworld",
+                "x": 165, // the x + y coordinates are the "middle" of your square. 
+                "y": 719,
+                "size": 32 // we can set size here but I recommend setting it per-map in maps.json instead of per-square
+            }
+        ]
+    },
+    {
+        "name": "The Button Room",
+        "chest_unopened_img": "/images/items/close.png",
+        "chest_opened_img": "/images/items/open.png",
+        "overlay_background": "#000000",
+        "access_rules": [
+            " "
+        ],
+        "sections": [
+            {
+                "name": "Top Left Room Chest",
+                "access_rules": [
+                    "@top_left_room"
+                ],
+                "visibility_rules": [
+                    ""
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "Overworld",
+                "x": 120,
+                "y": 208,
+                "size": 32
+            }
+        ]
+    },
+    {
+        "name": "The Evil Lair",
+        "chest_unopened_img": "/images/items/close.png",
+        "chest_opened_img": "/images/items/open.png",
+        "overlay_background": "#000000",
+        "access_rules": [
+            " "
+        ],
+        "sections": [
+            {
+                "name": "Right Room Enemy Drop",
+                "access_rules": [
+                    // You can either use functions for less text here or cover all bases here!
+                    // Settings itemcodes work the same as item itemcodes
+                    "@right_room, sword, hardmode_off",
+                    "@right_room, sword, hardmode_on, shield",
+                    "@right_room, sword, hardmode_on, healthupgrade:1",
+                ],
+                "visibility_rules": [
+                    ""
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Defeat The Big Bad Evil Guy (Event)", // this is an event check.
+                // This is not a location in the apworld but often it is a logical event inside the apworld
+                // as well. Tracker devs add these to make it obvious to users what they need to do to unlock
+                // another place. The condition for something to be an event versus just setting the required
+                // items as an access rule is that the event is in "another place". It can also help show when
+                // goal is in logic, like in this case.
+                "access_rules": [
+                    "@final_boss_room, ^$bigguy" // see, I told you: one perceived region, two logical regions
+                ],
+                "visibility_rules": [
+                    ""
+                ],
+                "hosted_item": "victory" // a hosted item! Gray means uncollected, colorful means collected.
+                                         // it's the opposite to normal locations and there *are* ways to
+                                         // reverse it, which however decrease pop performance and are
+                                         // tedious to create and maintain. I'd like to poll this in the new
+                                         // tool forum but AP mods haven't gotten back to me after a week whether
+                                         // I can have a channel instead of a forum post because I want to use
+                                         // threads :((
+                                         // oh yeah, see items/events.json for these
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "Overworld",
+                "x": 662,
+                "y": 191,
+                "size": 32
+            }
+        ]
+    },
+    {
+        "name": "The Rock Room",
+        "chest_unopened_img": "/images/items/close.png",
+        "chest_opened_img": "/images/items/open.png",
+        "overlay_background": "#000000",
+        "access_rules": [
+            " "
+        ],
+        "sections": [
+            {
+                "name": "Top Middle Chest",
+                "access_rules": [
+                    "@top_middle_room"
+                ],
+                "visibility_rules": [
+                    ""
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "Overworld",
+                "x": 368,
+                "y": 183,
+                "size": 32
+            }
+        ]
+    },
+    {
+        "name": "The Tree Room",
+        "chest_unopened_img": "/images/items/close.png",
+        "chest_opened_img": "/images/items/open.png",
+        "overlay_background": "#000000",
+        "access_rules": [
+            " "
+        ],
+        "sections": [
+            {
+                "name": "Bottom Right Room Left Chest",
+                "access_rules": [
+                    "@bottom_right_room"
+                ],
+                "visibility_rules": [
+                    ""
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Bottom Right Room Right Chest",
+                "access_rules": [
+                    "@bottom_right_room"
+                ],
+                "visibility_rules": [
+                    ""
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "Overworld",
+                "x": 687,
+                "y": 706,
+                "size": 32
+            }
+        ]
+    }
+]

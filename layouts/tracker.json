@@ -1,0 +1,59 @@
+{
+    "tracker_default": {
+        "type": "container",
+        "background": "#171717",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dropshadow": false,
+                    "dock": "bottom",
+                    "content": [
+                        {
+                            "type": "group",
+                            "background": "#171717",
+                            "header": "Items",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "key_items_grid"
+                            }
+                        },
+                        // This game doesn't have events! YET.
+                        //{
+                        //    "type": "group",
+                        //    "background": "#171717",
+                        //    "header": "Events",
+                        //    "dock": "left",
+                        //    "content": {
+                        //        "type": "layout",
+                        //        "key": "event_grid"
+                        //    }
+                        //},
+                        {
+                            "type": "group",
+                            "background": "#171717",
+                            "header": "Tools",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "tools_grid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "dock",
+                    "content": [
+                        {
+                            "type": "layout",
+                            "key": "tabbed_maps"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

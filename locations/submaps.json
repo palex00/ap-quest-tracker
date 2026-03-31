@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Submap-Singles",
+        "children": [
+{"name": "The Button Room", "sections": [{"ref": "The Button Room/Top Left Room Chest", "name": "Top Left Room Chest"}], "map_locations": [{"map": "mainroom", "x": 114, "y": 268}]},
+{"name": "The Rock Room", "sections": [{"ref": "The Rock Room/Top Middle Chest", "name": "Top Middle Chest"}], "map_locations": [{"map": "mainroom", "x": 421, "y": 115}]},
+{"name": "Starting Area", "sections": [{"ref": "Starting Area/Bottom Left Chest", "name": "Bottom Left Chest"}], "map_locations": [{"map": "mainroom", "x": 114, "y": 729}]},
+{"name": "Starting Area\u200b", "sections": [{"ref": "Starting Area/Bottom Left Extra Chest", "name": "Bottom Left Extra Chest"}], "map_locations": [{"map": "mainroom", "x": 114, "y": 575}]},
+{"name": "The Tree Room", "sections": [{"ref": "The Tree Room/Bottom Right Room Left Chest", "name": "Bottom Right Room Left Chest"}], "map_locations": [{"map": "mainroom", "x": 651, "y": 729}]},
+{"name": "The Tree Room\u200b", "sections": [{"ref": "The Tree Room/Bottom Right Room Right Chest", "name": "Bottom Right Room Right Chest"}], "map_locations": [{"map": "mainroom", "x": 728, "y": 729}]},
+{"name": "The Evil Lair", "sections": [{"ref": "The Evil Lair/Right Room Enemy Drop", "name": "Right Room Enemy Drop"}], "map_locations": [{"map": "mainroom", "x": 728, "y": 426}]},
+{"name": "The Evil Lair\u200b", "sections": [{"ref": "The Evil Lair/Defeat The Big Bad Evil Guy (Event)", "name": "Defeat The Big Bad Evil Guy (Event)"}], "map_locations": [{"map": "mainroom", "x": 729, "y": 116}]}
+]}]

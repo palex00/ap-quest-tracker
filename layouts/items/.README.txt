@@ -1,0 +1,17 @@
+Some items may not exist when some settings are on / off.
+
+What I like to do is have different layouts for this. But it gets tedious to make these really quickly.
+
+So I asked claude.ai to make a permutator that will take care of this for you.
+
+Usage:
+1. Prepare your file to be a "fullsanity" (the most it can be) with the file name having "_OPTION" sections to indicate that option is turned on.
+Example:
+    items_shield_sword.json     -> has base items + sword + shield    
+    items_shield.json           -> has base items + shield
+    items_sword.json            -> has base items + sword
+    items.json                  -> has base items
+
+2. Open layout_permutator.py in a code / text editor to populate the GROUPS dictionary (the file itself has more info)
+3. Run with ``python layout_permutator.py``
+4. Success

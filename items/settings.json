@@ -1,0 +1,83 @@
+[
+// There are many ways to display a setting. I lied, there's two: Toggle or Progressive
+// The Upside of Progressive is you can display custom names & images for each stage, even when there's only two
+// The Upside of Toggle is that it's less effort.
+    {
+        "name": "Hard Mode", // This is not user facing
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "name": "Hard Mode: Off",
+                "img": "/images/settings/hardmode.png",
+                "img_mods": "@disabled",
+                "codes": "hardmode, hardmode_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Hard Mode: On",
+                "img": "/images/settings/hardmode.png",
+                "codes": "hardmode, hardmode_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // This is an example of what the above setting would look like as a toggle
+    // This is okay for easy toggles but when there's an option with five different outcomes,
+    // you can only use a progressive.
+    // A downside of this is also that the hover text will only ever display "Hard Mode"
+    // instead of what the current state is. This can create confusion when the option is
+    // a negative ("Remove XYZ").
+    //{
+    //    "name": "Hard Mode",
+    //    "type": "toggle",
+    //    "img": "/images/settings/hardmode.png",
+    //    "codes": "hardmode"
+    //},
+    {
+        "name": "Hammer",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "name": "No Hammer",
+                "img": "/images/settings/hammer_setting.png",
+                "img_mods": "@disabled",
+                "codes": "hammer_setting, hammer_setting_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Hamer Time",
+                "img": "/images/settings/hammer_setting.png",
+                "codes": "hammer_setting, hammer_setting_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Extra Starting Chest",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "name": "No Extra Starting Chest",
+                "img": "/images/settings/extrastartingchest.png",
+                "img_mods": "@disabled",
+                "codes": "extrastartingchest, extrastartingchest_off",
+                "inherit_codes": false
+            },
+            {
+                "name": "Yes Extra Starting Chest",
+                "img": "/images/settings/extrastartingchest.png",
+                "codes": "extrastartingchest, extrastartingchest_on",
+                "inherit_codes": false
+            }
+        ]
+    }
+]

@@ -1,0 +1,40 @@
+[
+// regions are based on the apworlds internal logic (see regions.py & rules.py)
+// individual checks can have further logic tied to them
+    {
+        "name": "overworld",
+        "access_rules": [
+            "" // no access rules because it's our starting point. Nothing is needed to get there
+        ]
+    },
+    {
+        "name": "top_left_room",
+        "access_rules": [
+            "@overworld, key" // it will only ever need the key and it's always required so we can reference the item directly
+        ]
+    },
+    {
+        "name": "bottom_right_room",
+        "access_rules": [
+            "@overworld, ^$can_destroy_bush" // right now, this should just be sword but I'm making it a function to show you the wonders of accessibility
+        ]
+    },
+    {
+        "name": "top_middle_room",
+        "access_rules": [
+            "@overworld, $hammersetting" // see function in logic.lua
+        ]
+    },
+    {
+        "name": "right_room",
+        "access_rules": [
+            "@overworld" // the region itself is directly connected, never with any hurdles
+        ]
+    },
+    {
+        "name": "final_boss_room",
+        "access_rules": [
+            "@right_room, key" // *technically* this needs the event of pressing the button, which currently is always locked behind the same access as "overworld + key". If we had data storage events, we would instead put the event here.
+        ]
+    }
+]

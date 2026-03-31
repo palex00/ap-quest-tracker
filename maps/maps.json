@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Overworld", // this is not player facing! I recommend lowercase always.
+        "location_size": 6,
+        "location_border_thickness": 1,
+        "img": "images/maps/overworldmap.png"
+    },
+    {
+        "name": "error_game",
+        "location_size": 6,
+        "location_border_thickness": 1,
+        "img": "images/maps/error_game.png"
+    }
+    // All other maps would also go here, that never get changed. But we don't have any for this game. Oops.
+]

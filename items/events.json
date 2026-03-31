@@ -1,0 +1,10 @@
+[    
+    {
+        "name": "Victory",
+        "type": "toggle",
+        "img": "images/events/victory.png",
+        "initial_active_state": false,
+        "overlay_align": "right",
+        "codes": "victory"
+    }
+]

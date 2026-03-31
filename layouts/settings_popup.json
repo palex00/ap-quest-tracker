@@ -1,0 +1,125 @@
+{
+    "settings_popup": {
+        "type": "dock",
+        "content": [
+        {
+            "type": "tabbed",
+            "tabs": [
+                {
+                    "title": "General",
+                    "content": {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "h_alignment": "left",
+                        "content": [
+                            {
+                                "type": "group",
+                                "header": "Sanities",
+                                "dock": "top",
+                                "content": {
+                                    "type": "layout",
+                                    "key": "sanity_grid"
+                                }
+                            },
+                            {
+                                "type": "group",
+                                "header": "Logic",
+                                "dock": "top",
+                                "content": {
+                                    "type": "layout",
+                                    "key": "logic_grid"
+                                }
+                            },
+                            {
+                                "type": "group",
+                                "header": "Roadblocks",
+                                "dock": "top",
+                                "content": {
+                                    "type": "layout",
+                                    "key": "roadblock_grid"
+                                }
+                            }
+                        ]
+                    }
+                }, // You can easily add a second tab in here!
+                //{
+                //    "title": "Dex Logic",
+                //    "content": {
+                //        "type": "array",
+                //        "orientation": "vertical",
+                //        "h_alignment": "left",
+                //        "content": [
+                //            {
+                //                "type": "group",
+                //                "header": "Encounter Logic",
+                //                "dock": "top",
+                //                "content": {
+                //                    "type": "layout",
+                //                    "key": "enc_logic_grid"
+                //                }
+                //            },
+                //            {
+                //                "type": "group",
+                //                "header": "Evolution Logic",
+                //                "dock": "top",
+                //                "content": {
+                //                    "type": "layout",
+                //                    "key": "evo_logic_grid"
+                //                }
+                //            },
+                //            {
+                //                "type": "group",
+                //                "header": "Information",
+                //                "dock": "top",
+                //                "content": {
+                //                    "type": "layout",
+                //                    "key": "information_grid"
+                //                }
+                //            }
+                //        ]
+                //    }
+                //}
+            ]
+        }
+        ],
+    },
+    "sanity_grid": {
+        "type": "itemgrid",
+        "item_margin": "2, 2",
+        "item_size": "256,256", // normally you don't set these so absurdly large but I cannot even grab the popout window because it's so small!
+        "item_h_alignment": "center",
+        "item_v_alignment": "center",
+        "h_alignment": "center",
+        "rows": [
+            [
+                "extrastartingchest"
+            ]
+        ]
+    },
+    "logic_grid": {
+        "type": "itemgrid",
+        "item_margin": "2, 2",
+        "item_size": "256,256",
+        "item_h_alignment": "center",
+        "item_v_alignment": "center",
+        "h_alignment": "center",
+        "rows": [
+            [
+                "hardmode"
+            ]
+        ]
+    },
+    "roadblock_grid": {
+        "type": "itemgrid",
+        "item_margin": "2, 2",
+        "item_size": "256,256",
+        "item_h_alignment": "center",
+        "item_v_alignment": "center",
+        "h_alignment": "left",
+        "rows": [
+            [
+                "hammer_setting"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Health Upgrade",
+        "type": "consumable",
+        "img": "images/items/healthupgrade.png",
+        "min_quantity": 0,
+        "max_quantity": 10,
+        "increment": 1,
+        "decrement": 1,
+        "initial_quantity": 0,
+        "overlay_align": "right",
+        "overlay_font_size": 14,
+        "overlay_background": "#000000",
+        "codes": "healthupgrade"
+    },
+    {
+        "name": "Key",
+        "type": "toggle",
+        "img": "images/items/key.png",
+        "initial_active_state": false,
+        "overlay_align": "right",
+        "codes": "key"
+    },
+    {
+        "name": "Hammer",
+        "type": "toggle",
+        "img": "images/items/hammer.png",
+        "initial_active_state": false,
+        "overlay_align": "right",
+        "codes": "hammer"
+    },
+    {
+        "name": "Shield",
+        "type": "toggle",
+        "img": "images/items/shield.png",
+        "initial_active_state": false,
+        "overlay_align": "right",
+        "codes": "shield"
+    },
+    {
+        "name": "Sword",
+        "type": "toggle",
+        "img": "images/items/sword.png",
+        "initial_active_state": false,
+        "overlay_align": "right",
+        "codes": "sword"
+    },
+    {
+        "name": "update",
+        "type": "toggle",
+        "img": "images/items/update.png",
+        "initial_active_state": false,
+        "overlay_align": "right",
+        "codes": "update"
+    }
+]

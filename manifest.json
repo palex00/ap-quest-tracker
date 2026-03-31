@@ -1,0 +1,17 @@
+{
+    "name": "APQuest Tracker",
+    "game_name": "APQuest",
+    "package_version": "1.0.0",
+    "package_uid": "apquest_ap",
+    "min_poptracker_version": "0.31.0",
+    "author": "palex00",
+    "versions_url": "https://raw.githubusercontent.com/palex00/ap-quest-tracker/versions/versions.json",
+    "variants": {
+        "Map Tracker": {
+            "display_name": "Map Tracker",
+            "flags": [
+                "ap"
+            ]
+        }
+    }
+}
