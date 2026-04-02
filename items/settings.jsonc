@@ -1,4 +1,10 @@
 [
+// "Why are some files jsonc and some are json?"
+// jsonc can handle comments and IDEs don't cry about it; json can't.
+// well it can but the IDEs cry about it
+// if you don't use comments and have proper json, you can use https://jsonlint.com/ to also help you debug!
+
+
 // There are many ways to display a setting. I lied, there's two: Toggle or Progressive
 // The Upside of Progressive is you can display custom names & images for each stage, even when there's only two
 // The Upside of Toggle is that it's less effort.
