@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "package_version": "1.0.1",
+      "download_url": "https://github.com/palex00/ap-quest-tracker/archive/refs/tags/1.0.1.zip",
+      "sha256": "4e8683a91962d4d969a7b2ceeba6e9a1766487e4acfbb8c33cee640ec9b6f663",
+      "changelog": [
+        "Check release notes"
+      ]
+    },
+    {
       "package_version": "1.0.0",
       "download_url": "https://github.com/palex00/ap-quest-tracker/archive/refs/tags/1.0.0.zip",
       "sha256": "aacd44a4051a0d2991a104d37ee10e7e1af6263fff4c5f2e2b1ef6762512795d",
