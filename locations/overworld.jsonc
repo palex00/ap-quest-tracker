@@ -179,7 +179,8 @@
             {
                 "name": "Bottom Right Room Left Chest",
                 "access_rules": [
-                    "@bottom_right_room"
+                    "@bottom_right_room, key, shield",
+                    "@bottom_right_room, key, {}"
                 ],
                 "visibility_rules": [
                     ""

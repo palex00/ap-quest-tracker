@@ -39,7 +39,11 @@ function can_destroy_bush()
     -- return bool_to_accesslvl[has("sword")]
     
     -- or use the function I made to specifically return levels for otherwise true/false statements + an extra layer if "2 makes it possible (yellow) but 3 makes it logical (green)"
-    return has_level("sword")
+    if has("sword") then
+        return AccessibilityLevel.Normal
+    else
+        return AccessibilityLevel.SequenceBreak
+    end
     
     -- now the reason we made this an AccessibilityLevel-Function is "What if NewSoupVi adds a mode where if you press Enter on the Bush 1000 times, it breaks but that's not in logic?"
     -- Then we could do:
