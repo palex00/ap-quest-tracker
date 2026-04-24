@@ -1,7 +1,7 @@
 {
     "name": "APQuest Tracker",
     "game_name": "APQuest",
-    "package_version": "1.0.1",
+    "package_version": "1.0.2",
     "package_uid": "apquest_ap",
     "min_poptracker_version": "0.31.0",
     "author": "palex00",
