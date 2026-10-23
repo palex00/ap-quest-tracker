@@ -86,7 +86,8 @@
     "sanity_grid": {
         "type": "itemgrid",
         "item_margin": "2, 2",
-        "item_size": "256,256", // normally you don't set these so absurdly large but I cannot even grab the popout window because it's so small!
+        "item_size": "64,64", // normally you don't set these so absurdly large but I cannot even grab the popout window because it's so small!
+                              // Update: turns out it was too big and the settings popout window was too big for some users' monitors. So remember: your monitor isn't everyone's monitor.
         "item_h_alignment": "center",
         "item_v_alignment": "center",
         "h_alignment": "center",
@@ -99,7 +100,7 @@
     "logic_grid": {
         "type": "itemgrid",
         "item_margin": "2, 2",
-        "item_size": "256,256",
+        "item_size": "64,64",
         "item_h_alignment": "center",
         "item_v_alignment": "center",
         "h_alignment": "center",
@@ -112,7 +113,7 @@
     "roadblock_grid": {
         "type": "itemgrid",
         "item_margin": "2, 2",
-        "item_size": "256,256",
+        "item_size": "64,64",
         "item_h_alignment": "center",
         "item_v_alignment": "center",
         "h_alignment": "left",
